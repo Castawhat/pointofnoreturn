@@ -1,0 +1,49 @@
+img {
+    width: 200px;
+    height: 200px;
+}
+header {
+    background: lightblue;
+    padding: 10px;
+    text-align: left;
+    font-family: "ABeeZee", sans-serif;
+}
+body {
+    text-align: center;
+    background: azure;
+    color: blue;
+    font-family: "ABeeZee", sans-serif;
+}
+footer {
+    background: azure;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: "ABeeZee", sans-serif;
+}
+.abeezee-regular {
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.abeezee-regular-italic {
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: lightblue;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-family: "ABeeZee", sans-serif;
+  border-radius: 8px;
+}

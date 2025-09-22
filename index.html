@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>The point of no return</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+    <header> <h1>The point of no return</h1> </header>
+<body>
+    <pre>
+i’m rowan. i know that names don’t mean much here, but i keep one for the sake of remembering who i am.
+trench is huge. they never mentioned how big it really is in dema.
+
+every step carries a weight. i stumble across marks left by others — scratches, symbols, warnings — yet somehow they guide me.
+
+the further i go, the more the place feels alive. i notice carvings: numerals and shapes, letters interlaced like a code. 
+only careful eyes catch them. they seem to spell out fragments of a phrase.
+
+inside dema, they practiced this thing called vialism. i’m not sure what it is, but that’s why i escaped.
+i saw the battle of paladin strait.
+
+—rowan
+</pre>
+</body>
+<footer>
+<!--<button onclick="window.location.href='https://castawhat.github.io/mysite/huh/'">You're past the point of no return. No going back now...</button>-->
+</html>
+<script>
+  const PASSWORD = "EASTISUP"; 
+
+  function showContent() {
+    document.body.style.display = '';
+  }
+
+  function hideContent() {
+    document.body.style.display = 'none';
+  }
+
+  hideContent();
+  let attempts = 0;
+  while (attempts < 3) {
+    const input = prompt("Enter the point of no return.");
+    if (input === PASSWORD) {
+      showContent();
+      break;
+    } else {
+      attempts++;
+      alert("Nuh Uh.");
+    }
+  }
+  if (attempts === 2) {
+    alert("Your access to the point of no return has been denied.");
+  }
+</script>
