@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>The point of no return</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+    <header> <h1>The point of no return</h1> </header>
+<body>
+    <pre>
+i’m rowan. i know that names don’t mean much here, but i keep one to remember who i am.
+trench is huge. they never told anyone how Vast it really is in dema.
+
+every step carries a weight. Inside the city walls, the air felt heavy, almost suffocating. the walls, the rules, the whispers — they all pressed in.
+i saw how they controlled people, how the patterns and Instructions shaped them until they forgot themselves. i couldn’t stay.
+
+i stumbled across marks left by others.
+scratches, symbols, warnings — and they guided me.
+the further i went, the more Alive the place felt, but not in a good way.
+it watched me, it tested me.
+
+i noticed carvings: numerals and shapes, Letters interlaced like a code. only careful eyes catch them, and they seemed to spell fragments of warnings.
+the whispers urged me forward. i stopped to listen, to understand, but the meaning was clear: staying meant surrender.
+
+inside dema, the bishops practiced something called vialism. i don’t fully understand it, but it twists people. 
+it kills them.
+
+the city’s ceremonies were Loud and frightening, echoing through the halls, leaving a mark on anyone who listened.
+they drain hope, little by little, until you forget yourself.
+
+that’s why I left. the walls could no longer contain me, and the green beyond promised something freer.
+
+i saw the battle of paladin Strait. it wasn’t just a fight. i knew then that escape was the only choice.
+
+something waiTs at the end of this path.
+i’ll probably stop for the night.
+
+—rowan 
+</pre>
+</body>
+<footer>
+<!--<button onclick="window.location.href='https://castawhat.github.io/mysite/huh/'">You're past the point of no return. No going back now...</button>-->
+</html>
+<script>
+  const PASSWORD = "EASTISUP"; 
+
+  function showContent() {
+    document.body.style.display = '';
+  }
+
+  function hideContent() {
+    document.body.style.display = 'none';
+  }
+
+  hideContent();
+  let attempts = 0;
+  while (attempts < 3) {
+    const input = prompt("Enter the point of no return. (2)");
+    if (input === PASSWORD) {
+      showContent();
+      break;
+    } else {
+      attempts++;
+      alert("Nuh Uh.");
+    }
+  }
+  if (attempts === 2) {
+    alert("Your access to the point of no return has been denied.");
+  }
+</script>
