@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>The point of no return</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+<header> <h1>The point of no return</h1> </header>
+<pre>
+i left the small clearing before dawn, the mist curling around my ankles.
+the path ahead was narrow, but familiar markings guided me.
+
+i moved four kilometers up, counting every step, each one heavier than the last.
+then, i turned — two kilometers to the left, following a faint trail of carvings.
+finally, i pushed forward three kilometers north, past twisted roots and crumbling stones, until i reached a hollow marked by an old tree stump.
+
+something waits there. a pattern. a sequence. a direction.
+if you’ve come this far, follow my steps exactly. 
+
+—rowan
+</pre>
+
+<div id="arrowMessage" style="display:none; margin-top:20px; font-size:1.2rem; color:blue;">
+<strong>BANDITO</strong>
+</div>
+
+<footer>
+<button onclick="window.location.href='https://castawhat.github.io/pointofnoreturn/six/'">Six</button>
+</footer>
+
+<script>
+  // Arrow-key sequence puzzle
+  const correctSequence = [
+    "ArrowRight","ArrowRight","ArrowRight","ArrowRight",  // 4 km up
+    "ArrowLeft","ArrowLeft",                 // 2 km left
+    "ArrowUp","ArrowUp","ArrowUp"            // 3 km north
+  ];
+
+  let currentIndex = 0;
+
+  window.addEventListener("keydown", (e) => {
+    if(e.key === correctSequence[currentIndex]) {
+      currentIndex++;
+      // sequence complete
+      if(currentIndex === correctSequence.length) {
+        document.getElementById("arrowMessage").style.display = "block";
+      }
+    } else {
+      // wrong key: reset sequence
+      currentIndex = 0;
+    }
+  });
+
+  // Existing password prompt
+  const PASSWORD = "THE BISHOPS ARE NOT YOUR FRIEND"; 
+
+  function showContent() {
+    document.body.style.display = '';
+  }
+
+  function hideContent() {
+    document.body.style.display = 'none';
+  }
+
+  hideContent();
+  let attempts = 0;
+  while (attempts < 3) {
+    const input = prompt("Enter the point of no return. (5)");
+    if (input === PASSWORD) {
+      showContent();
+      break;
+    } else {
+      attempts++;
+      alert("Nuh Uh.");
+    }
+  }
+  if (attempts === 2) {
+    alert("Your access to the point of no return has been denied.");
+  }
+</script>
+</body>
+</html>
