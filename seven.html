@@ -4,59 +4,89 @@
     <meta charset="UTF-8" />
     <title>The point of no return</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="Favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
-    <header> <h1>The point of no return</h1> </header>
+</head>
 <body>
-    <pre>
-i woke up to the sound of branches cracking, though the air around me was still.
-something had changed, i know it.
+<header> <h1>The point of no return</h1> </header>
 
-as i walked further, i found another cluster of carvings. these were different from the warnings, almost like someone wanted me to notice.
-among them, one phrase stood out, after all it was written seven times.
+<pre>
+THEY. WATCH.
+I. FEEL. IT.
+EVERY SHADOW IS LONGER THAN THE LAST.
+HANDS. TWITCH. SPINE. TIGHT.
 
-ZHOSVMVSPUH
+THE WHISPERS. ALL OF THEM.
+IT YPE. THE YSA YIA MNOT HING.
+I SCRATCH. I WR ITE.
+THEY. MOVE. FAST.
 
-i traced it with my hand, over and over. it felt like it wasn’t just random letters, but something important, something waiting to be turned.
-maybe a code. maybe a name.
+STREETS. WALLS. LETTERS.
+TREMBLE. MY NAME. NOT MY NAME.
+I CAN’T. CAN’T. CAN’T.
 
-the forest pressed in while i stood there. i could feel eyes watching, but when i turned, nothing. only the endless green.
-the whispers followed, closer now. they repeat the phrase when i close my eyes.
+THE LIGHTS. FLICK. THE TREES. BEND.
+SHADOWS. MOVE. TOO. FAST.
+BLURRYFACE IS COMING. 
 
-i’ll try to make sense of it later. for now, i need to keep moving.
+I. WATCH. I. COUNT.
+EVERY. STEP. EVERY. GLANCE.
+I TRY. I FAIL. I TRY AGAIN.
+THEY. ARE EVERYWHERE. NOWHERE.
 
-—rowan
+MAYBE IF YOU SEE IT…
+MAYBE YOU CAN MAKE SENSE OF IT.
+
+—ROWAN
 </pre>
-</body>
+
+<div id="blurryResult" style="display:none; margin-top:20px; font-size:1.2rem; color: red;">
+<strong>BISHOP</strong>
+</div>
+
 <footer>
-<button onclick="window.location.href='https://pointofnoreturn.vercel.app/eight.html/'">Eight</button>-
-</html>
+<button onclick="window.location.href='https://pointofnoreturn.vercel.app/eight.html/'">Eight</button>
+</footer>
+
 <script>
-  const PASSWORD = "SUMMIT"; 
+const PAGE_PASSWORD = "SUMMIT"; 
 
-  function showContent() {
+function showContent() {
     document.body.style.display = '';
-  }
+}
 
-  function hideContent() {
+function hideContent() {
     document.body.style.display = 'none';
-  }
+}
 
-  hideContent();
-  let attempts = 0;
-  while (attempts < 3) {
+hideContent();
+let attempts = 0;
+while (attempts < 3) {
     const input = prompt("Enter the point of no return. (3)");
-    if (input === PASSWORD) {
-      showContent();
-      break;
+    if (input === PAGE_PASSWORD) {
+        showContent();
+        break;
     } else {
-      attempts++;
-      alert("Nuh Uh.");
+        attempts++;
+        alert("Nuh Uh.");
     }
-  }
-  if (attempts === 2) {
+}
+if (attempts === 2) {
     alert("Your access to the point of no return has been denied.");
-  }
+}
+
+// Hidden Blurryface typing
+let typed = "";
+const BLUR_PASSWORD = "BLURRYFACE";
+
+window.addEventListener("keydown", (e) => {
+    const key = e.key.toUpperCase();
+    if(key.length === 1 && key.match(/[A-Z]/)) {
+        typed += key;
+        if(typed.endsWith(BLUR_PASSWORD)) {
+            document.getElementById("blurryResult").style.display = "block";
+            typed = "";
+        }
+    }
+});
 </script>
+</body>
+</html>

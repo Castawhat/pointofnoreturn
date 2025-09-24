@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>The point of no return</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+    <header> <h1>The point of no return</h1> </header>
+<body>
+    <pre>
+i can’t stop thinking about dema.
+the walls, the towers, the streets lined with eyes that never blinked.
+i remember the routines, the ceremonies, the way everything was measured, controlled.
+
+the bishops were always there, or maybe i just felt them everywhere.
+their voices, commanding, telling you what to do before you even thought it.
+i used to believe it was normal, that this was the only way to be. the right way to be.
+but the patterns never felt right.
+
+i remember the nights in my room, staring at the ceiling, counting, trying to breathe,
+wondering if anyone else felt the same tightness in their chest.
+some did. some didn’t survive.
+
+i now know vialism is not just a religion, it’s a prison.
+the bishops of dema took it and twisted it, telling everyone that ending themselves is the only way to paradise, the only path to redemption.
+every citizen is forced to live under that doctrine, shaping their life around it, counting down to a fate they don’t question.
+when someone dies, naturally or not, they become what the bishops call the “glorious gone,” vessels for the bishops’ use. 
+their bodies are buried under neon gravestones at the city’s edge, stored until needed.
+i’ve seen the whispers about what happens next — in the battle of paladin strait, the bishops raised the glorious gone as weapons, through this seizing thing i don't understand.
+it makes my skin crawl to think about it, and it’s why i had to leave.
+
+the forest outside feels endless, but at least it’s alive.
+it doesn’t control me. it doesn’t watch me.
+it lets me be, even if my own mind won’t.
+
+—rowan
+</pre>
+</body>
+<footer>
+<!--<button onclick="window.location.href='https://pointofnoreturn.vercel.app/ten.html/'">Ten</button>-->
+</html>
+<script>
+  const PASSWORD = "VESSEL"; 
+
+  function showContent() {
+    document.body.style.display = '';
+  }
+
+  function hideContent() {
+    document.body.style.display = 'none';
+  }
+
+  hideContent();
+  let attempts = 0;
+  while (attempts < 3) {
+    const input = prompt("Enter the point of no return. (8)");
+    if (input === PASSWORD) {
+      showContent();
+      break;
+    } else {
+      attempts++;
+      alert("Nuh Uh.");
+    }
+  }
+  if (attempts === 2) {
+    alert("Your access to the point of no return has been denied.");
+  }
+</script>
